@@ -18,7 +18,7 @@ public abstract class JobField {
     }
 
     public String toString() {
-        return "ID:";
+        return value;
     }
 
     public int getId() {

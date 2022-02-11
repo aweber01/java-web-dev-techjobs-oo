@@ -37,7 +37,12 @@ public class JobTest {
     public void testToString(){
         Job testJob6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-        assertEquals("ID:", testJob6.toString());
+        assertEquals("ID: " + testJob6.getId() + "\n Name: " + testJob6.getName() + "\n Employer: " + testJob6.getEmployer() + "\n Location: " + testJob6.getLocation() + "\n Position Type: " + testJob6.getPositionType() + "\n Core Competency: " + testJob6.getCoreCompetency(), testJob6.toString());
+
+        Job testJob7 = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
+        assertEquals("ID: " + testJob7.getId() + "\n Name: " + testJob7.getName() + "\n Employer: Data Not Available" + testJob7.getEmployer() + "\n Location: " + testJob7.getLocation() + "\n Position Type: " + testJob7.getPositionType() + "\n Core Competency: " + testJob7.getCoreCompetency(), testJob7.toString());
     }
+
 
 }

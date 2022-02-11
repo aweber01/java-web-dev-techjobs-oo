@@ -71,6 +71,42 @@ public class Job {
         this.coreCompetency = coreCompetency;
     }
 
+    public String toString() {
+        String nameString, employerString, locationString, positionString, competencyString;
+
+        if(!name.isEmpty()) {
+            nameString = name;
+        } else {
+            nameString = "Data Not Available";
+        }
+
+        if(!employer.toString().equals("")) {
+            employerString = employer.toString();
+        } else {
+            employerString = "Data Not Available";
+        }
+
+        if(!location.toString().equals("")) {
+            locationString = location.toString();
+        } else {
+            locationString = "Data Not Available";
+        }
+
+        if(!positionType.toString().equals("")) {
+            positionString = positionType.toString();
+        } else {
+            positionString = "Data Not Available";
+        }
+
+        if(!coreCompetency.toString().equals("")) {
+            competencyString = coreCompetency.toString();
+        } else {
+            competencyString = "Data Not Available";
+        }
+
+        return " ID: " + id + "\n Name: " + nameString + "\n Employer: " + employerString + "\n Location: " + locationString + "\n Position Type: " + positionString + "\n Core Competency: " + competencyString + "\n";
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
