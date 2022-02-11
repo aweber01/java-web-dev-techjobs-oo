@@ -33,5 +33,11 @@ public class JobTest {
         assertFalse(testJob4.equals(testJob5));
     }
 
+    @Test
+    public void testToString(){
+        Job testJob6 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
+        assertEquals("ID:", testJob6.toString());
+    }
 
 }
